@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/apptsearch"
+    tools:context=".Search_Activity">
+
+    <EditText
+        android:id="@+id/editBeginDateSearch"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="MM/DD/YYYY"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/editbegintimesearch"
+        app:layout_constraintEnd_toStartOf="@+id/editEndDatesearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editEndDatesearch"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="22dp"
+        android:ems="10"
+        android:hint="MM/DD/YYYY"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/editEndTimeSearch"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editbegintimesearch"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:hint="HH:MM:SS"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/searchbutton"
+        app:layout_constraintTop_toBottomOf="@+id/editBeginDateSearch"
+        tools:layout_editor_absoluteX="4dp" />
+
+    <EditText
+        android:id="@+id/editEndTimeSearch"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:hint="HH:MM:SS"
+        android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editEndDatesearch" />
+
+    <Button
+        android:id="@+id/searchbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="510dp"
+        android:text="Search Appointments"
+        android:onClick="perform_search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editBeginDateSearch" />
+</androidx.constraintlayout.widget.ConstraintLayout>

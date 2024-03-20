@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/appt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:textAlignment="textStart"
+    android:visibility="visible"
+    tools:context=".Appt_Activity">
+
+    <EditText
+        android:id="@+id/editDesc"
+        android:layout_width="380dp"
+        android:layout_height="120dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint= "Enter Description"
+        app:layout_constraintBottom_toTopOf="@+id/new_appt_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Begin Time"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editBeginTime"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editEndDate2"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="MM/DD/YYYY"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editBeginDate"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="MM/DD/YYYY"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="End Time"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editEndTime"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/editBeginTime"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:ems="10"
+        android:hint="HH:MM:SS"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/b_pm"
+        tools:layout_editor_absoluteX="4dp" />
+
+    <EditText
+        android:id="@+id/editEndTime"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="4dp"
+        android:ems="10"
+        android:hint="HH:MM:SS"
+        android:inputType="time"
+        app:layout_constraintBottom_toTopOf="@+id/e_pm"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_ed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="End Date"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editEndDate2"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/new_appt_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="#2196F3"
+        android:foregroundTint="#2196F3"
+        android:text="Create Appointment"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:text="Begin Date"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editBeginDate"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/b_pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="b_pm_check"
+        android:text="Check for PM"
+        app:layout_constraintBottom_toTopOf="@+id/editDesc"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/e_pm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="e_pm_check"
+        android:text="Check for PM"
+        app:layout_constraintBottom_toTopOf="@+id/editDesc"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
